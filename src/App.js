@@ -30,21 +30,23 @@ function App() {
   <br/>
   <div className="border-2 border-gray-300 rounded-lg py-1.5 mt-12 max-w-3xl mx-auto">
     <Slider
-    name="Colombia Gesha"
-    value={value1}
-    onChangeValue={onChange1}
-    cond={false}
+      name="Colombia Gesha"
+      value={value1}
+      onChangeValue={onChange1}
+      cond={false}
     />
     <br/>
     <Slider
-    name="Sudan Rume"
-    value={value2}
-    onChangeValue={onChange2}
-    cond={true}
+      name="Sudan Rume"
+      value={value2}
+      onChangeValue={onChange2}
+      cond={true}
     />
   </div>
   <div className="border-2 rounded-lg max-w-3xl mx-auto m-10">
-    <Outputs/>
+    <Outputs
+      sliderValue={value1}
+    />
   </div>
 </div>
   );
