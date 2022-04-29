@@ -13,7 +13,12 @@
   theme: {
     extend: {
       colors:{
-        slider: "#3ABFF8"
+        slider: "#1939bd"
+      },
+      scale:{
+        "175" : "1.75",
+        "200" : "2.00",
+        "225" : "2.25",
       },
     },
   },
