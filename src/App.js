@@ -30,7 +30,7 @@ function App() {
   <br/>
   <div className="flex flex-col items-center border-2 border-gray-300 rounded-lg p-1.5 m-12 max-w-3xl mx-auto">
     <Slider
-      name="Colombia Gesha"
+      name="Gesha"
       value={value1}
       onChangeValue={onChange1}
       cond={false}
@@ -47,6 +47,9 @@ function App() {
     <Outputs
       sliderValue={value2}
     />
+  </div>
+  <div className="p-1.5 max-w-3xl mx-auto scale-150 transform-gpu">
+    🍋
   </div>
 </div>
   );
