@@ -47,8 +47,8 @@ const Outputs = ({sliderValue}) => {
           <span className="mx-1 text-gray-300">Acidity: </span>
           <span>{acidity.toFixed(1)}</span>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-2.5">
-          <div class="bg-blue-600 h-2.5 rounded-full" style={{width:acidity_pct+"%"}}></div>
+        <div className="w-full bg-gray-200 rounded-full h-3.5">
+          <div class="bg-blue-700 h-3.5 rounded-full" style={{width:acidity_pct+"%"}}></div>
         </div>
       </div>
 
@@ -57,8 +57,8 @@ const Outputs = ({sliderValue}) => {
           <span className="mx-1 text-gray-300">Sweetness: </span>
           <span>{sweetness.toFixed(1)}</span>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-2.5">
-          <div class="bg-blue-600 h-2.5 rounded-full" style={{width:sweetness_pct+"%"}}></div>
+        <div className="w-full bg-gray-200 rounded-full h-3.5">
+          <div class="bg-blue-700 h-3.5 rounded-full" style={{width:sweetness_pct+"%"}}></div>
         </div>
       </div>
 
@@ -67,8 +67,8 @@ const Outputs = ({sliderValue}) => {
           <span className="mx-1 text-gray-300">Texture: </span>
           <span>{texture.toFixed(1)}</span>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-2.5">
-          <div class="bg-blue-600 h-2.5 rounded-full" style={{width:texture_pct+"%"}}></div>
+        <div className="w-full bg-gray-200 rounded-full h-3.5">
+          <div class="bg-blue-700 h-3.5 rounded-full" style={{width:texture_pct+"%"}}></div>
         </div>
       </div>
     </div>

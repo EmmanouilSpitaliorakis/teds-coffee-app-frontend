@@ -1,28 +1,32 @@
 const Slider = ({min, max, step, value, name, onChangeValue, cond}) => {
   return (
-    <div>
-        <label className="mx-4 text-gray-300">{name}: </label>
-        {cond === true ?
+    <div className="w-5/6">
+      <div className="w-full flex justify-between">
+        <span className="text-gray-300">{name} :</span>
+        <span className="text-gray-300">{value}%</span>
+      </div>
+      {cond === true ?
         <input
-            className="ml-7"
-            type="range"
-            min={min}
-            max={max}
-            step={step}
-            value={value}
-            name={name}
-            onChange={onChangeValue}
-            /> : 
-            <input
-            type="range"
-            min={min}
-            max={max}
-            step={step}
-            value={value}
-            name={name}
-            onChange={onChangeValue}
-            />}
-        <span className="text-gray-300 ml-3">{value}%</span>
+          className="py-1.5 h-2 w-full"
+          type="range"
+          min={min}
+          max={max}
+          step={step}
+          value={value}
+          name={name}
+          onChange={onChangeValue}
+        /> : 
+        <input
+          className="py-1.5 h-2 w-full"
+          type="range"
+          min={min}
+          max={max}
+          step={step}
+          value={value}
+          name={name}
+          onChange={onChangeValue}
+        />
+      }
     </div>
   )
 }

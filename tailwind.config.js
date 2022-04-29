@@ -1,8 +1,21 @@
-module.exports = {
+ module.exports = {
   mode: "jit",
   content: ["./src/**/*.{html,js}"],
-  theme: {
-    extend: {},
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          "primary": "#FBBD23",
+        },
+      },
+    ],
   },
-  plugins: [],
-}
+  theme: {
+    extend: {
+      colors:{
+        slider: "#3ABFF8"
+      },
+    },
+  },
+  // plugins: [require("daisyui")],
+};

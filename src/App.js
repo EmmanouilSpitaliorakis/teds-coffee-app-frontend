@@ -1,7 +1,8 @@
 import Button from "./components/Button";
-import Slider from "./components/Slider";
+import Slide_manuel from "./components/Slider";
 import Outputs from "./components/Outputs";
 import {useState} from "react";
+// import {Slider} from "@material-ui/core"
 
 function App() {
 
@@ -28,22 +29,22 @@ function App() {
     <Button name="Milk" onClick={onClick}/>
   </div>
   <br/>
-  <div className="border-2 border-gray-300 rounded-lg py-1.5 mt-12 max-w-3xl mx-auto">
-    <Slider
+  <div className="flex flex-col items-center border-2 border-gray-300 rounded-lg p-1.5 m-12 max-w-3xl mx-auto">
+    <Slide_manuel
       name="Colombia Gesha"
       value={value1}
       onChangeValue={onChange1}
       cond={false}
     />
     <br/>
-    <Slider
+    <Slide_manuel
       name="Sudan Rume"
       value={value2}
       onChangeValue={onChange2}
       cond={true}
     />
   </div>
-  <div className="flex flex-col items-center border-2 rounded-lg max-w-3xl mx-auto m-10">
+  <div className="flex flex-col items-center border-2 border-gray-300 rounded-lg p-1.5 m-12 max-w-3xl mx-auto">
     <Outputs
       sliderValue={value2}
     />
