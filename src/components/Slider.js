@@ -1,5 +1,4 @@
 import "./Slider.css"
-import {createUseStyles} from 'react-jss'
 
 const Slider = ({min, max, step, value, name, onChangeValue, rangeRef}) => {
 
