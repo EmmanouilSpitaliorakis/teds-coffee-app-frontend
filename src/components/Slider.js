@@ -1,16 +1,7 @@
 import "./Slider.css"
-import {useRef, useState} from "react"
 import {createUseStyles} from 'react-jss'
 
 const Slider = ({min, max, step, value, name, onChangeValue, rangeRef}) => {
-
-  const useStyles= createUseStyles({
-    rangeSlider: {
-      "&::-webkit-slider-thumb":{
-
-      }
-    }
-  });
 
   return (
     <div className="w-5/6">
