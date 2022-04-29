@@ -48,8 +48,8 @@ function App() {
       sliderValue={value2}
     />
   </div>
-  <div className="p-1.5 max-w-3xl mx-auto scale-150 transform-gpu">
-    🍋
+  <div className="flex flex-col items-center p-1.5 m-12 max-w-3xl mx-auto scale-150">
+    🍋🌿
   </div>
 </div>
   );

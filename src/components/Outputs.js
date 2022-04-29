@@ -45,7 +45,6 @@ const Outputs = ({sliderValue}) => {
       <div className="text-gray-300 pt-3 pb-1.5">
         <div className="w-full flex justify-between mb-1">
           <span className="mx-1 text-gray-300">Acidity: </span>
-          <span>{acidity.toFixed(1)}</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-3.5">
           <div class="bg-blue-700 h-3.5 rounded-full" style={{width:acidity_pct+"%"}}></div>
@@ -55,7 +54,6 @@ const Outputs = ({sliderValue}) => {
       <div className="text-gray-300 py-1.5">
         <div className="w-full flex justify-between mb-1">
           <span className="mx-1 text-gray-300">Sweetness: </span>
-          <span>{sweetness.toFixed(1)}</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-3.5">
           <div class="bg-blue-700 h-3.5 rounded-full" style={{width:sweetness_pct+"%"}}></div>
@@ -65,7 +63,6 @@ const Outputs = ({sliderValue}) => {
       <div className="text-gray-300 pt-1.5 pb-3">
         <div className="w-full flex justify-between mb-1">
           <span className="mx-1 text-gray-300">Texture: </span>
-          <span>{texture.toFixed(1)}</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-3.5">
           <div class="bg-blue-700 h-3.5 rounded-full" style={{width:texture_pct+"%"}}></div>
