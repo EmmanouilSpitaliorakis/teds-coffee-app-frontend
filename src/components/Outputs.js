@@ -1,18 +1,16 @@
-import { useState } from "react"
-
 const Outputs = ({sliderValue}) => {
 
-  const [colombiaGeisha, setColombiaGeisha] = useState({
+  const colombiaGeisha = {
     acidity: 4,
     sweetness: 3,
     texture: 2
-  })
+  }
 
-  const [ethiopianHeirloom, setEthiopianHeirloom] = useState({
+  const ethiopianHeirloom = {
     acidity: 2,
     sweetness: 4,
     texture: 4
-  })
+  }
   
   const scoreToPercent = (sliderValue) => {
     var acidityDiff = colombiaGeisha.acidity - ethiopianHeirloom.acidity
@@ -27,27 +25,52 @@ const Outputs = ({sliderValue}) => {
     var sweetness = sweetnessStep * (sliderValue)
     var texture = textureStep * (sliderValue)
 
-    var acidity = colombiaGeisha.acidity - acidity
-    var sweetness = colombiaGeisha.sweetness - sweetness
-    var texture = colombiaGeisha.texture - texture
+    acidity = colombiaGeisha.acidity - acidity
+    sweetness = colombiaGeisha.sweetness - sweetness
+    texture = colombiaGeisha.texture - texture
 
     return {acidity, sweetness, texture}
   }
 
+  let acidity = (Math.round(scoreToPercent(sliderValue).acidity * 100) / 100)
+  let sweetness = (Math.round(scoreToPercent(sliderValue).sweetness * 100) / 100)
+  let texture = (Math.round(scoreToPercent(sliderValue).texture * 100) / 100)
+
+  let acidity_pct = (100 / 5) * acidity.toFixed(3)
+  let sweetness_pct = (100 / 5) * sweetness.toFixed(3)
+  let texture_pct = (100 / 5) * texture.toFixed(3)
+
   return (
-    <div>
-        <div className="text-gray-300 pt-3 pb-1.5 px-2">
-            <label className="mx-4 text-gray-300">Acidity: </label>
-            <span>{scoreToPercent(sliderValue).acidity}</span>
+    <div className="w-5/6">
+      <div className="text-gray-300 pt-3 pb-1.5">
+        <div className="w-full flex justify-between mb-1">
+          <span className="mx-1 text-gray-300">Acidity: </span>
+          <span>{acidity.toFixed(1)}</span>
         </div>
-        <div className="text-gray-300 py-1.5 px-2">
-            <label className="mx-4 text-gray-300">Sweetness: </label>
-            <span>{scoreToPercent(sliderValue).sweetness}</span>
+        <div className="w-full bg-gray-200 rounded-full h-2.5">
+          <div class="bg-blue-600 h-2.5 rounded-full" style={{width:acidity_pct+"%"}}></div>
         </div>
-        <div className="text-gray-300 pt-1.5 pb-3 px-2">
-            <label className="mx-4 text-gray-300">Texture: </label>
-            <span>{scoreToPercent(sliderValue).texture}</span>
+      </div>
+
+      <div className="text-gray-300 py-1.5">
+        <div className="w-full flex justify-between mb-1">
+          <span className="mx-1 text-gray-300">Sweetness: </span>
+          <span>{sweetness.toFixed(1)}</span>
         </div>
+        <div className="w-full bg-gray-200 rounded-full h-2.5">
+          <div class="bg-blue-600 h-2.5 rounded-full" style={{width:sweetness_pct+"%"}}></div>
+        </div>
+      </div>
+
+      <div className="text-gray-300 pt-1.5 pb-3">
+        <div className="w-full flex justify-between mb-1">
+          <span className="mx-1 text-gray-300">Texture: </span>
+          <span>{texture.toFixed(1)}</span>
+        </div>
+        <div className="w-full bg-gray-200 rounded-full h-2.5">
+          <div class="bg-blue-600 h-2.5 rounded-full" style={{width:texture_pct+"%"}}></div>
+        </div>
+      </div>
     </div>
   )
 }

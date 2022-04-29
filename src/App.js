@@ -43,9 +43,9 @@ function App() {
       cond={true}
     />
   </div>
-  <div className="border-2 rounded-lg max-w-3xl mx-auto m-10">
+  <div className="flex flex-col items-center border-2 rounded-lg max-w-3xl mx-auto m-10">
     <Outputs
-      sliderValue={value1}
+      sliderValue={value2}
     />
   </div>
 </div>
