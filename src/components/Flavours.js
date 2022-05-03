@@ -25,6 +25,8 @@ export const Flavours = ({isEspresso, pct}) => {
                     return ("🍫🥃");
                 case 0:
                     return ("🍫🍬");
+                default:
+                    return("🍋🌿")
             }
         }else{
             switch (pct){
@@ -51,7 +53,7 @@ export const Flavours = ({isEspresso, pct}) => {
                 case 0:
                     return ("🍫🍬");
                 default:
-                    return("🍋🌿")
+                    return("🍋🍯")
             }
         }
 
