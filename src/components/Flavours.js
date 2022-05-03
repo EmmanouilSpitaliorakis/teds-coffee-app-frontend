@@ -4,74 +4,54 @@ export const Flavours = ({isEspresso, pct}) => {
         if (isEspresso){
             switch (pct){
                 case 100:
-                    return ("🍋🌿")
-                break;
+                    return ("🍋🌿");
                 case 90:
-                    return ("🍋🍏")
-                break;
+                    return ("🍋🍏");
                 case 80:
-                    return ("🍋🍎🍓🍫")
-                break;
+                    return ("🍋🍎🍓🍫");
                 case 70:
-                    return ("🍭🍫🍍🍋🍓🌸")
-                break;
+                    return ("🍭🍫🍍🍋🍓🌸");
                 case 60:
-                    return ("🍭🍫🍋🌸")
-                break;
+                    return ("🍭🍫🍋🌸");
                 case 50:
-                    return ("🍫🍍🍭")
-                break;
+                    return ("🍫🍍🍭");
                 case 40:
-                    return ("🍫🍯🍷")
-                break;
+                    return ("🍫🍯🍷");
                 case 30:
-                    return ("🍫🍷🍬")
-                break;
+                    return ("🍫🍷🍬");
                 case 20:
-                    return ("🍫🥜🥃")
-                break;
+                    return ("🍫🥜🥃");
                 case 10:
-                    return ("🍫🥃")
-                break;
+                    return ("🍫🥃");
                 case 0:
-                    return ("🍫🍬")
-                break;
+                    return ("🍫🍬");
             }
         }else{
             switch (pct){
                 case 100:
-                    return ("🍋🍯")
-                break;
+                    return ("🍋🍯");
                 case 90:
-                    return ("🍏🍯")
-                break;
+                    return ("🍏🍯");
                 case 80:
-                    return ("🍐🍏🍯")
-                break;
+                    return ("🍐🍏🍯");
                 case 70:
-                    return ("🍭🍐🍏🍯")
-                break;
+                    return ("🍭🍐🍏🍯");
                 case 60:
-                    return ("🍊🍎🍍🍯")
-                break;
+                    return ("🍊🍎🍍🍯");
                 case 50:
-                    return ("🍫🍬🍎🍍")
-                break;
+                    return ("🍫🍬🍎🍍");
                 case 40:
-                    return ("🍫🍬🥭🍓🍍🍒")
-                break;
+                    return ("🍫🍬🥭🍓🍍🍒");
                 case 30:
-                    return ("🍫🍓🍒🍍")
-                break;
+                    return ("🍫🍓🍒🍍");
                 case 20:
-                    return ("🍫🍷🍬")
-                break;
+                    return ("🍫🍷🍬");
                 case 10:
-                    return ("🍫🥃🍬")
-                break;
+                    return ("🍫🥃🍬");
                 case 0:
-                    return ("🍫🍬")
-                break;
+                    return ("🍫🍬");
+                default:
+                    return("🍋🌿")
             }
         }
 
