@@ -47,7 +47,7 @@ const Outputs = ({sliderValue}) => {
           <span className="mx-1 text-gray-300">Acidity: </span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-3.5">
-          <div class="bg-slider h-3.5 rounded-full" style={{width:acidity_pct+"%"}}></div>
+          <div className="bg-slider h-3.5 rounded-full" style={{width:acidity_pct+"%"}}></div>
         </div>
       </div>
 
@@ -65,7 +65,7 @@ const Outputs = ({sliderValue}) => {
           <span className="mx-1 text-gray-300">Texture: </span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-3.5">
-          <div class="bg-slider h-3.5 rounded-full" style={{width:texture_pct+"%"}}></div>
+          <div className="bg-slider h-3.5 rounded-full" style={{width:texture_pct+"%"}}></div>
         </div>
       </div>
     </div>

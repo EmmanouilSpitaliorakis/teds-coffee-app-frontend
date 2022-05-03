@@ -2,6 +2,7 @@ import Button from "./components/Button";
 import Slider from "./components/Slider";
 import Outputs from "./components/Outputs";
 import {useState, useRef} from "react";
+import { Flavours } from "./components/Flavours";
 
 function App() {
 
@@ -20,11 +21,13 @@ function App() {
     rangeRef2.current.style.background = newBackgroundStyle
   }
 
-  const onClick = () => {
-    console.log("click")
+  const [isEspresso, setEspresso] = useState(true)
+
+  const changeFlavours = () => {
+    setEspresso(!isEspresso)
   }
 
-  const [value1, setValue1] = useState(75)
+  const [value1, setValue1] = useState(70)
   const [value2, setValue2] = useState(100 - value1)
 
   const onChange1 = e =>{
@@ -41,12 +44,11 @@ function App() {
     rangeLinearGradient1(100 - e.target.valueAsNumber, 0, 100)
   }
 
-
   return (    
 <div>
-  <div class="p-5 flex justify-evenly font-medium">
-    <Button name="Espresso" onClick={onClick}/>
-    <Button name="Milk" onClick={onClick}/>
+  <div className="p-5 flex justify-evenly font-medium">
+    <Button name="Espresso" onClick={changeFlavours}/>
+    <Button name="Milk" onClick={changeFlavours}/>
   </div>
   <br/>
   <div className="flex flex-col items-center border-2 border-gray-300 rounded-lg p-1.5 m-12 max-w-3xl mx-auto">
@@ -70,7 +72,10 @@ function App() {
     />
   </div>
   <div className="flex flex-col items-center p-1.5 mx-auto scale-225">
-    🍋🌿
+    <Flavours
+    isEspresso={isEspresso}
+    pct={value1}
+    />
   </div>
 </div>
   );

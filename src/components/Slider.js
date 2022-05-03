@@ -24,7 +24,7 @@ const Slider = ({min, max, step, value, name, onChangeValue, rangeRef}) => {
 Slider.defaultProps = {
     min: 0,
     max: 100,
-    step: 5,
+    step: 10,
 }
 
 export default Slider
