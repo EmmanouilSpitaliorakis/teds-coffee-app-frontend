@@ -1,4 +1,4 @@
-const Button = ({name, isEspresso, setEspresso, buttons, setActiveTab, activeTab=-1}) => {
+const Button = ({name, isEspresso, setEspresso, buttons, setActiveTab, activeTab}) => {
 
   const onClick = (i) =>{
     setActiveTab(i)

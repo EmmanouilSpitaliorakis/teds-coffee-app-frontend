@@ -28,7 +28,7 @@ function App() {
   }
 
   const [isEspresso, setEspresso] = useState(true)
-  const [activeButton, setButton] = useState(-1)
+  const [activeButton, setButton] = useState(0)
 
   const [value1, setValue1] = useState(100)
   const [value2, setValue2] = useState(100 - value1)
