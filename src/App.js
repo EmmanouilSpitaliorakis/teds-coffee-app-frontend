@@ -9,6 +9,12 @@ function App() {
   const rangeRef1 = useRef();
   const rangeRef2 = useRef();
 
+  const buttons = [
+  { id: "Espresso", data: "Espresso" },
+  { id: "Milk", data: "Milk" },
+  { id: "Special", data: "Special" },
+];
+
   const rangeLinearGradient1 = (value, min, max) => {
     const percentage = ((value - min) / (max - min)) * 100 + "%"
     const newBackgroundStyle = `linear-gradient(90deg, ${"#1939bd"} 0% ${percentage}, ${"#fdfdfd"} ${percentage} 100%)`
@@ -22,12 +28,9 @@ function App() {
   }
 
   const [isEspresso, setEspresso] = useState(true)
+  const [activeButton, setButton] = useState(-1)
 
-  const changeFlavours = () => {
-    setEspresso(!isEspresso)
-  }
-
-  const [value1, setValue1] = useState(70)
+  const [value1, setValue1] = useState(100)
   const [value2, setValue2] = useState(100 - value1)
 
   const onChange1 = e =>{
@@ -47,8 +50,12 @@ function App() {
   return (    
 <div>
   <div className="p-5 flex justify-evenly font-medium">
-    <Button name="Espresso" onClick={changeFlavours}/>
-    <Button name="Milk" onClick={changeFlavours}/>
+    <Button name="Espresso"
+            isEspresso={isEspresso}
+            setEspresso={setEspresso}
+            buttons={buttons}
+            setActiveTab={setButton}
+            activeTab={activeButton}/>
   </div>
   <br/>
   <div className="flex flex-col items-center border-2 border-gray-300 rounded-lg p-1.5 m-12 max-w-3xl mx-auto">
@@ -73,7 +80,7 @@ function App() {
   </div>
   <div className="flex flex-col items-center p-1.5 mx-auto scale-225">
     <Flavours
-    isEspresso={isEspresso}
+    isEspresso={buttons[activeButton].data}
     pct={value1}
     />
   </div>

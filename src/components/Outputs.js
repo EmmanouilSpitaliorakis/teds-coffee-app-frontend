@@ -56,7 +56,7 @@ const Outputs = ({sliderValue}) => {
           <span className="mx-1 text-gray-300">Sweetness: </span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-3.5">
-          <div class="bg-slider h-3.5 rounded-full" style={{width:sweetness_pct+"%"}}></div>
+          <div className="bg-slider h-3.5 rounded-full" style={{width:sweetness_pct+"%"}}></div>
         </div>
       </div>
 
