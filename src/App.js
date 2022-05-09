@@ -3,6 +3,7 @@ import Slider from "./components/Slider";
 import Outputs from "./components/Outputs";
 import {useState, useRef} from "react";
 import { Flavours } from "./components/Flavours";
+import recipe from "./static/images/signature.jpeg"
 
 function App() {
 
@@ -88,7 +89,7 @@ function App() {
         </div>
       ) : (
        <div>
-         <img className="p-1.5 m-12 mx-auto max-w-prose" src={require("./static/images/signature.jpeg")} alt="Signature Recipe"/>
+         <img className="p-1.5 m-12 mx-auto max-w-prose" src={recipe} alt="Signature Recipe"/>
        </div>
       )}
     </div>
