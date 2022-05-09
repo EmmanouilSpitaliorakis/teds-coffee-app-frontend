@@ -88,7 +88,7 @@ function App() {
         </div>
       ) : (
        <div>
-         <img className="p-1.5 m-12 max-w-6xl mx-auto" src={require("./static/images/signature.jpeg")} alt="Signature Recipe"/>
+         <img className="p-1.5 m-12 mx-auto max-w-prose" src={require("./static/images/signature.jpeg")} alt="Signature Recipe"/>
        </div>
       )}
     </div>
