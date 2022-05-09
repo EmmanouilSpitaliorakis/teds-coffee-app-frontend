@@ -12,7 +12,7 @@ function App() {
   const buttons = [
   { id: "Espresso", data: "Espresso" },
   { id: "Milk", data: "Milk" },
-  { id: "Special", data: "Special" },
+  { id: "Signature", data: "Signature" },
 ];
 
   const rangeLinearGradient1 = (value, min, max) => {
@@ -47,44 +47,51 @@ function App() {
     rangeLinearGradient1(100 - e.target.valueAsNumber, 0, 100)
   }
 
-  return (    
-<div>
-  <div className="p-5 flex justify-evenly font-medium">
-    <Button name="Espresso"
-            isEspresso={isEspresso}
-            setEspresso={setEspresso}
-            buttons={buttons}
-            setActiveTab={setButton}
-            activeTab={activeButton}/>
-  </div>
-  <br/>
-  <div className="flex flex-col items-center border-2 border-gray-300 rounded-lg p-1.5 m-12 max-w-3xl mx-auto">
-    <Slider
-      name="Gesha"
-      value={value1}
-      onChangeValue={onChange1}
-      rangeRef={rangeRef1}
-    />
-    <br/>
-    <Slider
-      name="Sudan Rume"
-      value={value2}
-      onChangeValue={onChange2}
-      rangeRef={rangeRef2}
-    />
-  </div>
-  <div className="flex flex-col items-center border-2 border-gray-300 rounded-lg p-1.5 m-12 max-w-3xl mx-auto">
-    <Outputs
-      sliderValue={value2}
-    />
-  </div>
-  <div className="flex flex-col items-center p-1.5 mx-auto scale-225">
-    <Flavours
-    isEspresso={buttons[activeButton].data}
-    pct={value1}
-    />
-  </div>
-</div>
+  return (
+    <div>
+      <div className="p-5 flex justify-evenly font-medium">
+        <Button name="Espresso"
+                isEspresso={isEspresso}
+                setEspresso={setEspresso}
+                buttons={buttons}
+                setActiveTab={setButton}
+                activeTab={activeButton}/>
+      </div>
+      {activeButton !== 2 ? (
+        <div>
+          <div className="flex flex-col items-center border-2 border-gray-300 rounded-lg p-1.5 m-12 max-w-3xl mx-auto">
+            <Slider
+                    name="Gesha"
+                    value={value1}
+                    onChangeValue={onChange1}
+                    rangeRef={rangeRef1}
+                    />
+            <br/>
+            <Slider
+                    name="Sudan Rume"
+                    value={value2}
+                    onChangeValue={onChange2}
+                    rangeRef={rangeRef2}
+                    />
+          </div>
+          <div className="flex flex-col items-center border-2 border-gray-300 rounded-lg p-1.5 m-12 max-w-3xl mx-auto">
+            <Outputs
+                    sliderValue={value2}
+                    />
+          </div>
+          <div className="flex flex-col items-center p-1.5 mx-auto scale-225">
+            <Flavours
+                    isEspresso={buttons[activeButton].data}
+                    pct={value1}
+                    />
+          </div>
+        </div>
+      ) : (
+       <div>
+         <img src="./picture.jpeg" alt="Signature Recipe" />
+       </div>
+      )}
+    </div>
   );
 }
 
