@@ -8,11 +8,11 @@ export const Flavours = ({isEspresso, pct}) => {
                 case 90:
                     return ("🍋🍏");
                 case 80:
-                    return ("🍋🍎🍓🍫");
+                    return ("🍋🍎🍓");
                 case 70:
-                    return ("🍭🍫🍍🍋🍓🌸");
-                case 60:
                     return ("🍭🍫🍋🌸");
+                case 60:
+                    return ("🍭🍫🌸");
                 case 50:
                     return ("🍫🍍🍭");
                 case 40:
@@ -35,17 +35,17 @@ export const Flavours = ({isEspresso, pct}) => {
                 case 90:
                     return ("🍏🍯");
                 case 80:
-                    return ("🍐🍏🍯");
+                    return ("🍐🍏");
                 case 70:
-                    return ("🍭🍐🍏🍯");
+                    return ("🍭🍐");
                 case 60:
-                    return ("🍊🍎🍍🍯");
+                    return ("🍊🍎🍍");
                 case 50:
-                    return ("🍫🍬🍎🍍");
+                    return ("🍫🍬🍎");
                 case 40:
-                    return ("🍫🍬🥭🍓🍍🍒");
+                    return ("🍫🍬🍓🍍");
                 case 30:
-                    return ("🍫🍓🍒🍍");
+                    return ("🍫🍓🍒");
                 case 20:
                     return ("🍫🍷🍬");
                 case 10:
